@@ -1,6 +1,8 @@
+import re
+
 # open file
 f = open('text.txt', 'rt')
-for x in f:
-    if x == 'prince':
-        print('prince')
+content = f.read()
+split_content = re.split(r'\s+', content)
+print(split_content)
 f.close()
